@@ -10,7 +10,6 @@
         <li><span>成份 ：</span>{{list.cf}}</li>
         <li><span>治疗疾病 ：</span>{{list.zljb}}</li>
         <li><span>适应症 ：</span>{{list.syz}}</li>
-        <li><span>治疗疾病 ：</span>{{list.zljb}}</li>
         <li><span>药物相互作用 ：</span>{{list.zljb}}</li>
         <li><span>注意事项 ：</span>{{list.zysx}}</li>
         <li><p style="font-size:0.25rem;color:#aaa;text-align:center">本页面信息仅供参考，请以产品实际附带说明书为准。</p></li>

@@ -43,11 +43,11 @@
     />
     <!-- 修改密码弹出层 -->
     <van-popup v-model="mimashow" round position="top" :style="{ height: '40%' }">
-      <div style="padding:.3rem .2rem;">
+      <div class="tanchu" style="padding:.3rem .2rem;">
         <div style="text-align:center">修改密码</div>
         <van-cell-group>
-          <van-field v-model="yuanmima" label="旧密码:" placeholder="请输入旧密码" />
-          <van-field v-model="xinmima" label="新密码:" placeholder="请输入新密码" />
+          <van-field v-model="yuanmima" type="password" label="旧密码:" placeholder="请输入旧密码" />
+          <van-field v-model="xinmima" type="password" label="新密码:" placeholder="请输入新密码" />
           <div style="text-align: center;">
             <van-button type="info" style="border-radius:10px" @click="mimaqueding">确定</van-button>
             <van-button type="danger" style="border-radius:10px" @click="mimaquxiao">取消</van-button>
@@ -152,14 +152,36 @@ export default {
 </script>
 <style lang="less" scoped>
 .Settings {
-  .van-cell__right-icon {
-    top: 0.3rem;
+  .tanchu {
+    .van-cell {
+      border: 1px solid #1989fa;
+      border-radius: 1rem;
+      height: 1rem;
+      line-height: 0.5rem;
+      font-size: 0.3rem;
+      margin: 0.5rem 0;
+    }
+  }
+  .van-button--normal {
+    padding: 0 0.8rem;
+    height: 0.9rem;
+    line-height: 0.9rem;
   }
   .van-cell {
     height: 1.5rem;
     line-height: 1rem;
     font-weight: 700;
     font-size: 0.4rem;
+  }
+  .van-hairline--top-bottom::after,
+  .van-hairline-unset--top-bottom::after {
+    border: 0px;
+  }
+  .van-cell:not(:last-child)::after {
+    border: 0px;
+  }
+  .van-cell__right-icon {
+    top: 0.3rem;
   }
   background-color: #f4f4f5;
   position: fixed;

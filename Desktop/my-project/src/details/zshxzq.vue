@@ -115,8 +115,9 @@
     <div class="plnr">
       <!-- <span class="lstb martop">|</span>
       <span class="martop">评论内容</span>
-      <van-button class="fr" size="small" color="#1989fa" plain>写评论</van-button> -->
+      <van-button class="fr" size="small" color="#1989fa" plain>写评论</van-button>-->
     </div>
+    <img class="hddb" @click="dingbu" v-show="hddb" src="static/img/mescroll-totop.png" alt />
   </div>
 </template>
 <script>
@@ -125,17 +126,51 @@ export default {
   name: "zshxzq",
   data() {
     return {
-      shcan: "like-o"
+      shcan: "like-o",
+      hddb: false
     };
   },
+  mounted() {
+    window.addEventListener("scroll", this.scrollToTop);
+  },
   methods: {
+    //回到顶部
+    scrollToTop(el) {
+      let scrollTop =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop;
+      let browserHeight = window.outerHeight;
+      if (scrollTop > browserHeight / 2) {
+        this.hddb = true;
+      } else {
+        this.hddb = false;
+      }
+    },
+    dingbu() {
+      var timer;
+      timer = setInterval(function() {
+        let osTop =
+          document.documentElement.scrollTop || document.body.scrollTop;
+        let ispeed = Math.floor(-osTop / 5);
+        document.documentElement.scrollTop = document.body.scrollTop =
+          osTop + ispeed;
+        this.isTop = true;
+        if (osTop === 0) {
+          clearInterval(timer);
+        }
+      }, 30);
+    },
+    destroyed() {
+      window.removeEventListener("scroll", this.scrollToTop);
+    },
     shoucang() {
       if (this.shcan == "like-o") {
         this.shcan = "like";
-        Toast.success('收藏成功');
+        Toast.success("收藏成功");
       } else {
         this.shcan = "like-o";
-        Toast.fail('取消收藏');
+        Toast.fail("取消收藏");
       }
     },
     //返回

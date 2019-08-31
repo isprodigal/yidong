@@ -24,9 +24,7 @@
         <img :src="item.imgs" alt />
       </van-cell>
     </van-list>
-    <div id="goToTop">
-      <a href="javascript:;">点我返回顶部</a>
-    </div>
+    <img class="hddb" @click="dingbu" v-show="hddb" src="static/img/mescroll-totop.png" alt />
   </div>
 </template>
 
@@ -37,6 +35,7 @@ export default {
     return {
       loading: false,
       finished: false,
+      hddb:false,
       value: "健康生活",
       list: [
         {
@@ -48,7 +47,40 @@ export default {
       ]
     };
   },
+  mounted() {
+    window.addEventListener("scroll", this.scrollToTop);
+  },
   methods: {
+    //回到顶部
+    scrollToTop(el) {
+      let scrollTop =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop;
+      let browserHeight = window.outerHeight;
+      if (scrollTop > browserHeight / 2) {
+        this.hddb = true;
+      } else {
+        this.hddb = false;
+      }
+    },
+    dingbu() {
+      var timer;
+      timer = setInterval(function() {
+        let osTop =
+          document.documentElement.scrollTop || document.body.scrollTop;
+        let ispeed = Math.floor(-osTop / 5);
+        document.documentElement.scrollTop = document.body.scrollTop =
+          osTop + ispeed;
+        this.isTop = true;
+        if (osTop === 0) {
+          clearInterval(timer);
+        }
+      }, 30);
+    },
+    destroyed() {
+      window.removeEventListener("scroll", this.scrollToTop);
+    },
     onLoad() {
       // 异步更新数据
       setTimeout(() => {

@@ -1,6 +1,6 @@
 <template>
   <div class="user">
-    <van-nav-bar title="个人信息" style="border:0px"/>
+    <van-nav-bar title="个人信息" style="border:0px" />
     <div class="main" @click="grsz">
       <van-image round width="1rem" height="1rem" src="static/img/user.jpg" />
       <div class="dianhua">
@@ -9,9 +9,11 @@
         <van-icon name="arrow" />
       </div>
     </div>
-    <van-cell title="消息通知" icon="chat-o" is-link to="/notice" />
-    <van-cell title="我的关注" icon="like-o" is-link to="/follow" />
-    <van-cell title="意见反馈 " icon="replay" is-link to="/feedback" />
+    <div class="list">
+      <van-cell title="消息通知" icon="chat-o" is-link to="/notice" />
+      <van-cell title="我的关注" icon="like-o" is-link to="/follow" />
+      <van-cell title="意见反馈 " icon="replay" is-link to="/feedback" />
+    </div>
   </div>
 </template>
 <script>
@@ -31,13 +33,25 @@ export default {
 
 <style lang="less" scoped>
 .user {
-  .van-hairline--bottom::after{
+  .list {
+    background-color: #fff;
+    padding: 0.2rem 0.2rem;
+    .van-cell {
+      border: 1px solid #ccc;
+      border-radius: 0.2rem;
+      margin-bottom: .2rem;
+    }
+    .van-cell:last-child{
+      margin-bottom: 0;
+    }
+  }
+  .van-hairline--bottom::after {
     border: 0px;
   }
-    background-color: #f5f5f5;
-    height: 100%;
-    width: 100%;
-    position:fixed;
+  background-color: #f5f5f5;
+  height: 100%;
+  width: 100%;
+  position: fixed;
   .main {
     background-color: #1989fa;
     padding: 0.1rem 0.3rem;

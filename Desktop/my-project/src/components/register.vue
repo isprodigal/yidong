@@ -114,6 +114,9 @@ export default {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
   }
+  .van-button--small{
+    border-radius: .2rem;
+  }
   .van-cell {
     border: 1px solid #1989fa;
     border-radius: 10px;

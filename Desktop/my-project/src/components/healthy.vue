@@ -9,7 +9,7 @@
               v-for="value in index.ypsl"
               :key="value.name"
               :to="value.tzym"
-              style="margin:.2rem;border:1px solid #ccc;flex-basis: 28%;"
+              style="margin:.2rem;border:1px solid #eaeaea;flex-basis: 28%;"
             >
               <svg class="icon" aria-hidden="true">
                 <use :xlink:href="value.icons" />

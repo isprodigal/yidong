@@ -17,6 +17,16 @@ const router = new Router({
       component: home,
     },
     {
+      path: '/information',
+      name: '百科',
+      component: () => import('@/components/information.vue'),
+    },
+    {
+      path:'/disease',
+      name:'百科详情',
+      component: () => import('@/components/disease.vue'),
+    },
+    {
       path: '/healthy',
       name: '药品',
       component: () => import('@/components/healthy.vue'),
