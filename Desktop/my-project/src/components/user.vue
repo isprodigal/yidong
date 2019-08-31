@@ -10,19 +10,47 @@
       </div>
     </div>
     <div class="list">
-      <van-cell title="消息通知" icon="chat-o" is-link to="/notice" />
+      <van-cell title="消息通知" icon="chat-o" is-link to="/notice"/>
       <van-cell title="我的关注" icon="like-o" is-link to="/follow" />
+      <van-cell title="浏览历史 " icon="clock-o" is-link to="/follow" />
       <van-cell title="意见反馈 " icon="replay" is-link to="/feedback" />
+      <van-cell title="清除缓存 " icon="delete" is-link @click="qchc" />
+      <van-cell title="注销 " icon="share" is-link @click="zhuxiao" />
     </div>
   </div>
 </template>
 <script>
+import { Toast } from "vant";
+import { Dialog } from "vant";
 export default {
   name: "user",
   data() {
     return {};
   },
   methods: {
+    zhuxiao() {
+      Dialog.confirm({
+        title: "注销",
+        message: "确定注销登陆？"
+      })
+        .then(() => {
+          // on confirm
+          localStorage.removeItem("loginInfo");
+          this.$router.push("/login");
+        })
+        .catch(() => {
+          // on cancel
+        });
+    },
+    qchc() {
+      Toast.loading({
+        mask: true,
+        message: "清除中..."
+      });
+      setTimeout(function() {
+        Toast.success("清除完毕，已清除50.25m");
+      }, 3000);
+    },
     //个人信息设置
     grsz() {
       this.$router.push("/Settings");
@@ -33,15 +61,18 @@ export default {
 
 <style lang="less" scoped>
 .user {
+  .van-cell__left-icon{
+    color: #1989fa;
+  }
   .list {
     background-color: #fff;
     padding: 0.2rem 0.2rem;
     .van-cell {
       border: 1px solid #ccc;
       border-radius: 0.2rem;
-      margin-bottom: .2rem;
+      margin-bottom: 0.2rem;
     }
-    .van-cell:last-child{
+    .van-cell:last-child {
       margin-bottom: 0;
     }
   }

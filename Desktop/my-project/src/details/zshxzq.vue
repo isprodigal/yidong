@@ -1,7 +1,10 @@
 <template>
   <div class="zshxzq">
     <van-nav-bar title="中暑了你会喝藿香正气水吗？" left-text="返回" left-arrow @click-left="onClickLeft">
-      <van-icon :name="shcan" slot="right" @click="shoucang" />
+      <van-icon :name="shcan" slot="right" @click="shoucang" style="margin-right:.2rem;"/>
+      <svg class="icon" aria-hidden="true" slot="right" style="color:#fff;">
+        <use xlink:href="#icon-fenxiang" />
+      </svg>
     </van-nav-bar>
     <ul>
       <li>
@@ -11,7 +14,7 @@
         <p>听上去好像没什么问题，因为在我们的固有思想中，似乎藿香正气水就是用来针对中暑的。很多人在暑期出游之时，也都会常备一些藿香正气水来预防中暑。</p>
       </li>
       <li>
-        <img src="../../static/img/xqsj1.jpg" alt />
+        <img src="static/img/xqsj1.jpg" alt />
       </li>
       <li>
         <p>这样做究竟对吗？藿香正气水真的可以消除中暑吗？</p>
@@ -33,7 +36,7 @@
         </p>
       </li>
       <li>
-        <img src="../../static/img/xqsj2.jpg" alt />
+        <img src="static/img/xqsj2.jpg" alt />
       </li>
       <li>
         <p>
@@ -62,7 +65,7 @@
         </p>
       </li>
       <li>
-        <img src="../../static/img/xqsj3.jpg" alt />
+        <img src="static/img/xqsj3.jpg" alt />
       </li>
       <li>
         <p>
@@ -76,7 +79,7 @@
         <p>那么一旦真的发生中暑，我们怎么做才是最正确的呢？</p>
       </li>
       <li>
-        <img src="../../static/img/xqsj4.jpg" alt />
+        <img src="static/img/xqsj4.jpg" alt />
       </li>
       <li>
         <p>
@@ -111,12 +114,74 @@
         <van-icon name="todo-list-o" />2019-7-16 16:21
       </span>
     </div>
-    <!-- <div class="fgx"></div> -->
+    <div class="fgx"></div>
     <div class="plnr">
-      <!-- <span class="lstb martop">|</span>
+      <span class="lstb martop">|</span>
       <span class="martop">评论内容</span>
-      <van-button class="fr" size="small" color="#1989fa" plain>写评论</van-button>-->
+      <van-button class="fr" size="small" color="#1989fa" plain @click="pinglun">写评论</van-button>
+      <div class="plnrmain">
+        <div
+          class="van-skeleton"
+          v-for="litm in list"
+          :key="litm.shijian"
+          style="padding:0.2rem 0;"
+        >
+          <div
+            class="van-skeleton__avatar van-skeleton__avatar--round"
+            style="width: 32px; height: 32px;margin-top:.2rem"
+          >
+            <van-image round :src="litm.src" />
+          </div>
+          <div class="van-skeleton__content">
+            <h3>
+              {{litm.name}}
+              <span class="fr">{{litm.shijian}}</span>
+            </h3>
+            <div style="margin-top:.2rem;">
+              <van-rate v-model="litm.xing" readonly />
+            </div>
+            <div style="margin-top:.2rem;">{{litm.neirong}}</div>
+          </div>
+        </div>
+        <van-button
+          type="primary"
+          size="large"
+          plain
+          style="color:#1989fa;border:1px solid #1989fa"
+        >查看全部评论</van-button>
+      </div>
     </div>
+    <div class="fgx"></div>
+    <div class="xgwz">
+      <span class="lstb martop">|</span>
+      <span class="martop">相关文章</span>
+      <van-row type="flex" justify="space-between">
+        <van-col span="11" v-for="litm in xgzt" :key="litm.src">
+          <router-link :to="litm.href" style="width:100%;height:100%">
+            <img :src="litm.src" />
+            <span>{{litm.name}}</span>
+          </router-link>
+        </van-col>
+      </van-row>
+    </div>
+    <!-- 弹出 -->
+    <van-popup v-model="show" round position="bottom" :style="{ height: '40%' }">
+      <div style="padding:.2rem;">
+        <p style="padding-bottom:.2rem;color:#aaa">评论:</p>
+        <textarea
+          placeholder="在这里输入内容..."
+          style="font-size:.3rem;width: 100%;height:3rem"
+          v-model="plnrs"
+        ></textarea>
+        <van-rate v-model="value" style="font-size:.3rem" />
+        <van-button
+          type="primary"
+          size="small"
+          style="position: absolute;right:.3rem;bottom:.7rem;background-color:#1989fa;border:0px;"
+          @click="pltj"
+        >提交</van-button>
+      </div>
+    </van-popup>
     <img class="hddb" @click="dingbu" v-show="hddb" src="static/img/mescroll-totop.png" alt />
   </div>
 </template>
@@ -127,13 +192,90 @@ export default {
   data() {
     return {
       shcan: "like-o",
-      hddb: false
+      hddb: false,
+      show: false,
+      value: 0,
+      plnrs: "",
+      list: [
+        {
+          src: "static/img/user.jpg",
+          name: "戏子",
+          shijian: "2019-7-20",
+          xing: 5,
+          neirong: "恐怖如斯"
+        },
+        {
+          src: "static/img/user.jpg",
+          name: "戏子",
+          shijian: "2019-7-21",
+          xing: 4,
+          neirong: "恐怖如斯"
+        },
+        {
+          src: "static/img/user.jpg",
+          name: "戏子",
+          shijian: "2019-7-22",
+          xing: 3,
+          neirong: "恐怖如斯"
+        }
+      ],
+      xgzt: [
+        {
+          src: "static/img/sj1.jpg",
+          name: "中暑了你会喝藿香正气水吗？",
+          href: "/zshxzq"
+        },
+        {
+          src: "static/img/sj2.jpg",
+          name: "中暑了你会喝藿香正气水吗？",
+          href: "/zshxzq"
+        }
+      ]
     };
   },
   mounted() {
     window.addEventListener("scroll", this.scrollToTop);
   },
   methods: {
+    sj() {
+      var date = new Date();
+      var seperator1 = "-";
+      var year = date.getFullYear();
+      var month = date.getMonth() + 1;
+      var strDate = date.getDate();
+      if (month >= 1 && month <= 9) {
+        month = "0" + month;
+      }
+      if (strDate >= 0 && strDate <= 9) {
+        strDate = "0" + strDate;
+      }
+      var currentdate = year + seperator1 + month + seperator1 + strDate;
+      return currentdate;
+    },
+    //评论确定
+    pltj() {
+      if (this.plnrs == "") {
+        Toast.fail("评论内容不能为空");
+      } else if (this.value == "") {
+        Toast.fail("请评分");
+      } else {
+        this.show = false;
+        this.list.push({
+          src: "static/img/user.jpg",
+          name: "戏子",
+          shijian: this.sj(),
+          xing: this.value,
+          neirong: this.plnrs
+        });
+        Toast.success("评论成功");
+        this.value = "";
+        this.plnrs = "";
+      }
+    },
+    //写评论
+    pinglun() {
+      this.show = true;
+    },
     //回到顶部
     scrollToTop(el) {
       let scrollTop =
@@ -164,6 +306,7 @@ export default {
     destroyed() {
       window.removeEventListener("scroll", this.scrollToTop);
     },
+    //收藏
     shoucang() {
       if (this.shcan == "like-o") {
         this.shcan = "like";
@@ -182,6 +325,25 @@ export default {
 </script>
 <style lang="less" scoped>
 .zshxzq {
+  .xgwz {
+    font-size: 0.3rem;
+    padding: 0.2rem;
+    margin-top: 0.2rem;
+    .van-row--flex {
+      img {
+        width: 100%;
+        height: 2rem;
+      }
+      span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+        color: #000;
+      }
+      margin-top: 0.2rem;
+    }
+  }
   .header {
     font-size: 0.7rem;
     text-align: center;
@@ -194,11 +356,16 @@ export default {
   }
   .plnr {
     padding: 0.2rem;
-    height: 0.7rem;
     font-size: 0.3rem;
     .martop {
       display: inline-block;
       margin-top: 0.2rem;
+    }
+    .van-button--small {
+      margin-top: 0.1rem;
+    }
+    .plnrmain {
+      padding: 0.2rem;
     }
   }
   .fgx {
@@ -239,5 +406,6 @@ export default {
     text-align: center;
     font-weight: 700;
   }
+  padding-bottom: 1rem;
 }
 </style>

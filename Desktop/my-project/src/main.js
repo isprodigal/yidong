@@ -7,13 +7,13 @@ import './rem'
 import '@/assets/css/commont.css'
 import { Tabbar, TabbarItem,Row, Col,Search,Icon,Swipe, SwipeItem,List,Cell,CellGroup,Image,Button,Field,
   NavBar,Notify,Divider,Tab,Tabs,Uploader,Collapse,CollapseItem,Popup,ActionSheet,TreeSelect,Sidebar,SidebarItem,
-  Grid,GridItem 
+  Grid,GridItem,Skeleton,Rate 
 } from 'vant';
 
 Vue.use(Tabbar).use(TabbarItem).use(Row).use(Col).use(Search).use(Icon).use(Swipe).use(SwipeItem).use(List)
 .use(Cell).use(CellGroup).use(Image).use(Button).use(Field).use(NavBar).use(Notify).use(Divider)
 .use(Tab).use(Tabs).use(Uploader).use(Collapse).use(CollapseItem).use(Popup).use(ActionSheet).use(TreeSelect)
-.use(Sidebar).use(SidebarItem).use(Grid).use(GridItem);
+.use(Sidebar).use(SidebarItem).use(Grid).use(GridItem).use(Skeleton).use(Rate);
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
