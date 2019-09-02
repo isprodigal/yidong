@@ -47,6 +47,11 @@ const router = new Router({
       component: () => import('../details/zshxzq.vue'),
     },
     {
+      path: '/smsjs',
+      name: '什么是近视？看书也会导致近视吗？',
+      component: () => import('../details/smsjs.vue'),
+    },
+    {
       path: '/user',
       name: '个人信息',
       meta: {

@@ -12,6 +12,11 @@
         <img src="@/assets/image/lb3.jpg" />
       </van-swipe-item>
     </van-swipe>
+    <van-notice-bar
+      mode="closeable"
+      left-icon="volume-o"
+      @click="tongzhi"
+    >通知: 高温天气即将来袭，准备好了吗？点击查看最新消息</van-notice-bar>
     <!-- 列表 -->
     <van-list v-model="loading" :finished="finished" finished-text="没有更多了" @load="onLoad">
       <van-cell
@@ -35,7 +40,7 @@ export default {
     return {
       loading: false,
       finished: false,
-      hddb:false,
+      hddb: false,
       value: "健康生活",
       list: [
         {
@@ -43,6 +48,12 @@ export default {
           keshi: "中医科-张程",
           imgs: "static/img/sj1.jpg",
           tz: "/zshxzq"
+        },
+        {
+          name: " 什么是近视？看书也会导致近视吗？",
+          keshi: "眼科-张张",
+          imgs: "static/img/lb3.jpg",
+          tz: "/smsjs"
         }
       ]
     };
@@ -51,6 +62,10 @@ export default {
     window.addEventListener("scroll", this.scrollToTop);
   },
   methods: {
+    //通知
+    tongzhi(){
+      this.$router.push({path:'notice'})
+    },
     //回到顶部
     scrollToTop(el) {
       let scrollTop =
