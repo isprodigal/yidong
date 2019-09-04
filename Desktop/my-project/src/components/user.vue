@@ -12,7 +12,7 @@
     <div class="list">
       <van-cell title="消息通知" icon="chat-o" is-link to="/notice"/>
       <van-cell title="我的关注" icon="like-o" is-link to="/follow" />
-      <van-cell title="浏览历史 " icon="clock-o" is-link to="/follow" />
+      <van-cell title="浏览历史 " icon="clock-o" is-link to="/History" />
       <van-cell title="意见反馈 " icon="replay" is-link to="/feedback" />
       <van-cell title="清除缓存 " icon="delete" is-link @click="qchc" />
       <van-cell title="注销 " icon="share" is-link @click="zhuxiao" />

@@ -134,23 +134,23 @@ export default {
         },
         {
           src: "static/img/user.jpg",
-          name: "戏子",
+          name: "小星星",
           shijian: "2019-7-21",
           xing: 4,
-          neirong: "恐怖如斯"
+          neirong: "啦啦啦"
         },
         {
           src: "static/img/user.jpg",
-          name: "戏子",
+          name: "飞飞",
           shijian: "2019-7-22",
           xing: 3,
-          neirong: "恐怖如斯"
+          neirong: "安全第一"
         }
       ],
       xgzt: [
         {
-          src: "static/img/lb3.jpg",
-          name: "什么是近视？看书也会导致近视吗？",
+          src: "static/img/lb2.jpg",
+          name: "合理膳食，餐餐有蔬菜，天天有水果。",
           href: "/smsjs"
         },
         {

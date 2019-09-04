@@ -2,7 +2,7 @@
   <div class="healthy">
     <van-nav-bar title="药品分类" />
     <div>
-      <van-tabs v-model="active" animated>
+      <van-tabs v-model="active" animated >
         <van-tab v-for="index in dhlist" :title="index.name" :key="index.name">
           <van-grid>
             <van-grid-item
@@ -397,5 +397,7 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-
+/deep/ .van-tabs__wrap--scrollable .van-tab{
+  flex-basis: 25% !important;
+}
 </style>

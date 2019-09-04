@@ -1,6 +1,6 @@
 <template>
   <div class="follow">
-    <van-nav-bar title="我的关注" left-text="返回" left-arrow @click-left="onClickLeft" />
+    <van-nav-bar title="浏览历史" left-text="返回" left-arrow @click-left="onClickLeft" />
     <!-- 列表 -->
     <van-list v-model="loading" :finished="finished" finished-text="没有更多了" @load="onLoad">
       <van-cell
@@ -23,7 +23,7 @@ export default {
       loading: false,
       finished: false,
       list: [
-        {
+         {
           name: "中暑了你会喝藿香正气水吗？",
           keshi: "中医科-张程",
           imgs: "static/img/sj1.jpg",

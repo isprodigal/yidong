@@ -1,7 +1,15 @@
 <template>
   <div class="classification">
     <van-nav-bar title="药品" left-text="返回" left-arrow @click-left="onClickLeft" />
-    <van-grid>
+    <van-row type="flex" justify="space-between">
+      <van-col span="11" v-for="litm in list" :key="litm.src">
+        <router-link :to="litm.href" style="width:100%;height:100%">
+          <img :src="litm.src" />
+          <span>{{litm.name}}</span>
+        </router-link>
+      </van-col>
+    </van-row>
+    <!-- <van-grid>
       <van-grid-item
         v-for="value in list"
         :key="value.name"
@@ -9,9 +17,9 @@
         style="margin:.2rem;border:1px solid #ccc;flex-basis: 28%;"
       >
         <img :src="value.src" alt />
-        <p style="margin-top:.1rem;text-align:center;width:100%">{{value.name}}</p>
+        <span style="margin-top:.1rem;text-align:center;width:100%;">{{value.name}}</span>
       </van-grid-item>
-    </van-grid>
+    </van-grid>-->
   </div>
 </template>
 <script>
@@ -23,17 +31,17 @@ export default {
         {
           name: "玉屏风颗粒",
           src: "static/img/yp1.jpg",
-          tzym: "/sj?1"
+          href: "/sj?0"
         },
         {
-          name: "99感冒灵颗粒",
+          name: "999感冒灵颗粒",
           src: "static/img/yp2.jpg",
-          tzym: "/sj?2"
+          href: "/sj?1"
         },
         {
-          name: "枸橼酸西地那非片",
+          name: "复方感冒灵片",
           src: "static/img/yp3.jpg",
-          tzym: "/sj?3"
+          href: "/sj?2"
         }
       ]
     };
@@ -47,4 +55,23 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+.classification {
+  font-size: 0.3rem;
+  .van-col {
+    border: 1px solid rgb(234, 234, 234);
+    margin: 0.2rem;
+    img {
+      width: 100%;
+      height: 2rem;
+    }
+    span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 100%;
+      color: #000;
+      text-align: center;
+    }
+  }
+}
 </style>

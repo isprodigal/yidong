@@ -23,8 +23,18 @@ const router = new Router({
     },
     {
       path:'/disease',
-      name:'百科详情',
+      name:'乙肝详情',
       component: () => import('@/components/disease.vue'),
+    },
+    {
+      path:'/gan',
+      name:'肝癌详情',
+      component: () => import('@/details/gan.vue'),
+    },
+    {
+      path:'/ganre',
+      name:'肝热病详情',
+      component: () => import('@/details/ganre.vue'),
     },
     {
       path: '/healthy',
@@ -50,6 +60,11 @@ const router = new Router({
       path: '/smsjs',
       name: '什么是近视？看书也会导致近视吗？',
       component: () => import('../details/smsjs.vue'),
+    },
+    {
+      path: '/reasonable',
+      name: ' 合理膳食，餐餐有蔬菜，天天有水果。',
+      component: () => import('../details/reasonable.vue'),
     },
     {
       path: '/user',
@@ -92,6 +107,14 @@ const router = new Router({
         requireLogin: true,  // 添加该字段，表示进入这个路由是需要登录的        
       },
       component: () => import('../components/follow.vue')
+    },
+    {
+      path: '/History',
+      name: '浏览历史',
+      meta: {
+        requireLogin: true,  // 添加该字段，表示进入这个路由是需要登录的        
+      },
+      component: () => import('../components/History.vue')
     },
     {
       path: '/feedback',
