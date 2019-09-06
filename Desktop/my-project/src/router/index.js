@@ -67,6 +67,25 @@ const router = new Router({
       component: () => import('../details/reasonable.vue'),
     },
     {
+      path: '/Nourishing',
+      name: ' 养肝护肾，多吃这个菜，价格便宜，一年四季常有，爽口开胃还下饭',
+      component: () => import('../details/Nourishing.vue'),
+    },
+    {
+      path: '/Suffer',
+      name: ' 拉肚子怎么办 哪些食物吃不得',
+      component: () => import('../details/Suffer.vue'),
+    },
+    {
+      path: '/meal',
+      name: ' 饭后这些事情千万不要做 伤身呐',
+      component: () => import('../details/meal.vue'),
+    },{
+      path: '/speak',
+      name: ' 3岁多小孩不说话怎么办?',
+      component: () => import('../details/speak.vue'),
+    },
+    {
       path: '/user',
       name: '个人信息',
       meta: {

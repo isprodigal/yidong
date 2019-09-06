@@ -73,6 +73,9 @@ export default {
 </script>
 <style lang="less" scoped>
 .login {
+  .van-nav-bar__right{
+  right: 16px;
+}
   .van-nav-bar .van-icon,.van-nav-bar__text{
     color: #fff;
   }

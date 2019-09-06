@@ -1,5 +1,5 @@
 <template>
-  <div class="follow">
+  <div class="History">
     <van-nav-bar title="浏览历史" left-text="返回" left-arrow @click-left="onClickLeft" />
     <!-- 列表 -->
     <van-list v-model="loading" :finished="finished" finished-text="没有更多了" @load="onLoad">
@@ -17,13 +17,13 @@
 </template>
 <script>
 export default {
-  name: "follow",
+  name: "History",
   data() {
     return {
       loading: false,
       finished: false,
       list: [
-         {
+        {
           name: "中暑了你会喝藿香正气水吗？",
           keshi: "中医科-张程",
           imgs: "static/img/sj1.jpg",
@@ -40,6 +40,30 @@ export default {
           keshi: "养生科-刘飞",
           imgs: "static/img/lb2.jpg",
           tz: "/reasonable"
+        },
+        {
+          name: " 养肝护肾，多吃这个菜，价格便宜，一年四季常有，爽口开胃还下饭",
+          keshi: "养生科-小笙",
+          imgs: "static/img/sj2.jpg",
+          tz: "/Nourishing"
+        },
+        {
+          name: " 拉肚子怎么办 哪些食物吃不得",
+          keshi: "生活科-王天",
+          imgs: "static/img/sj3.jpg",
+          tz: "/Suffer"
+        },
+        {
+          name: " 饭后这些事情千万不要做 伤身呐",
+          keshi: "健康科-朝朝",
+          imgs: "static/img/sj4.jpg",
+          tz: "/meal"
+        },
+        {
+          name: " 3岁多小孩不说话怎么办?",
+          keshi: "儿童科-花儿",
+          imgs: "static/img/sj5.jpg",
+          tz: "/speak"
         }
       ]
     };
@@ -47,19 +71,21 @@ export default {
   created() {},
   methods: {
     onLoad() {
-      // 异步更新数据
-      setTimeout(() => {
-        for (let i = 0; i < 5; i++) {
-          this.list.push(this.list[i]);
-        }
-        console.log(this.list);
-        // 加载状态结束
-        this.loading = false;
-        // 数据全部加载完成
-        if (this.list.length >= 100) {
-          this.finished = true;
-        }
-      }, 500);
+       this.loading = false;
+       this.finished = true;
+      // // 异步更新数据
+      // setTimeout(() => {
+      //   for (let i = 0; i < 5; i++) {
+      //     this.list.push(this.list[i]);
+      //   }
+      //   console.log(this.list);
+      //   // 加载状态结束
+      //   this.loading = false;
+      //   // 数据全部加载完成
+      //   if (this.list.length >= 100) {
+      //     this.finished = true;
+      //   }
+      // }, 500);
     },
     //返回
     onClickLeft() {
@@ -69,4 +95,7 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+.History{
+  padding-bottom: 1rem;
+}
 </style>

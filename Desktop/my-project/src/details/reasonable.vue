@@ -2,9 +2,9 @@
   <div class="smsjs">
     <van-nav-bar title=" 合理膳食，餐餐有蔬菜，天天有水果。" left-text="返回" left-arrow @click-left="onClickLeft">
       <van-icon :name="shcan" slot="right" @click="shoucang" style="margin-right:.2rem;" />
-      <svg class="icon" aria-hidden="true" slot="right" style="color:#fff;">
+      <!-- <svg class="icon" aria-hidden="true" slot="right" style="color:#fff;">
         <use xlink:href="#icon-fenxiang" />
-      </svg>
+      </svg> -->
     </van-nav-bar>
     <div class="main">
       <img src="static/img/lb2.jpg" alt />
@@ -48,7 +48,7 @@
         <van-icon name="browsing-history-o" />72
       </span>
       <span class="fr">
-        <van-icon name="todo-list-o" />2019-7-16 16:21
+        <van-icon name="todo-list-o" />2019-6-30 06:23
       </span>
     </div>
     <div class="fgx"></div>
@@ -137,23 +137,23 @@ export default {
         {
           src: "static/img/user.jpg",
           name: "戏子",
-          shijian: "2019-7-20",
+          shijian: "2019-7-1",
           xing: 5,
-          neirong: "恐怖如斯"
+          neirong: "sdgfdhh"
         },
         {
           src: "static/img/user.jpg",
           name: "戏子",
-          shijian: "2019-7-21",
+          shijian: "2019-7-2",
           xing: 4,
-          neirong: "恐怖如斯"
+          neirong: "qwrtretyiu"
         },
         {
           src: "static/img/user.jpg",
           name: "戏子",
-          shijian: "2019-7-22",
+          shijian: "2019-7-3",
           xing: 3,
-          neirong: "恐怖如斯"
+          neirong: "zcvxcb"
         }
       ],
       xgzt: [

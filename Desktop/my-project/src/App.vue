@@ -70,4 +70,10 @@ b {
   width: 1rem;
   height: 1rem;
 }
+.van-nav-bar__left{
+  left: 5px;
+}
+.van-nav-bar__right{
+  right: 0px;
+}
 </style>

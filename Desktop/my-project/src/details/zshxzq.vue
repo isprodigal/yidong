@@ -2,9 +2,9 @@
   <div class="zshxzq">
     <van-nav-bar title="中暑了你会喝藿香正气水吗？" left-text="返回" left-arrow @click-left="onClickLeft">
       <van-icon :name="shcan" slot="right" @click="shoucang" style="margin-right:.2rem;"/>
-      <svg class="icon" aria-hidden="true" slot="right" style="color:#fff;">
+      <!-- <svg class="icon" aria-hidden="true" slot="right" style="color:#fff;">
         <use xlink:href="#icon-fenxiang" />
-      </svg>
+      </svg> -->
     </van-nav-bar>
     <ul>
       <li>
@@ -202,7 +202,7 @@ export default {
           name: "戏子",
           shijian: "2019-7-20",
           xing: 5,
-          neirong: "恐怖如斯"
+          neirong: "qaqweas"
         },
         {
           src: "static/img/user.jpg",

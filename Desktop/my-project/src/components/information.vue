@@ -89,6 +89,30 @@ export default {
           keshi: "养生科-刘飞",
           imgs: "static/img/lb2.jpg",
           tz: "/reasonable"
+        },
+        {
+          name: " 养肝护肾，多吃这个菜，价格便宜，一年四季常有，爽口开胃还下饭",
+          keshi: "养生科-小笙",
+          imgs: "static/img/sj2.jpg",
+          tz: "/Nourishing"
+        },
+        {
+          name: " 拉肚子怎么办 哪些食物吃不得",
+          keshi: "生活科-王天",
+          imgs: "static/img/sj3.jpg",
+          tz: "/Suffer"
+        },
+        {
+          name: " 饭后这些事情千万不要做 伤身呐",
+          keshi: "健康科-朝朝",
+          imgs: "static/img/sj4.jpg",
+          tz: "/meal"
+        },
+        {
+          name: " 3岁多小孩不说话怎么办?",
+          keshi: "儿童科-花儿",
+          imgs: "static/img/sj5.jpg",
+          tz: "/speak"
         }
       ]
     };
@@ -128,19 +152,21 @@ export default {
       window.removeEventListener("scroll", this.scrollToTop);
     },
     onLoad() {
+       this.loading = false;
+       this.finished = true;
       // 异步更新数据
-      setTimeout(() => {
-        for (let i = 0; i < 5; i++) {
-          this.list.push(this.list[i]);
-        }
-        console.log(this.list);
-        // 加载状态结束
-        this.loading = false;
-        // 数据全部加载完成
-        if (this.list.length >= 10) {
-          this.finished = true;
-        }
-      }, 500);
+      // setTimeout(() => {
+      //   for (let i = 0; i < 1; i++) {
+      //     this.list.push(this.list[i]);
+      //   }
+      //   console.log(this.list);
+      //   // 加载状态结束
+      //   this.loading = false;
+      //   // 数据全部加载完成
+      //   if (this.list.length >= 4) {
+      //     this.finished = true;
+      //   }
+      // }, 500);
     }
   }
 };
