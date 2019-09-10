@@ -5,6 +5,8 @@ import App from './App'
 import router from './router'
 import './rem'
 import '@/assets/css/commont.css'
+import Mui from 'vue-awesome-mui';
+Vue.use(Mui);
 import { Tabbar, TabbarItem,Row, Col,Search,Icon,Swipe, SwipeItem,List,Cell,CellGroup,Image,Button,Field,
   NavBar,Notify,Divider,Tab,Tabs,Uploader,Collapse,CollapseItem,Popup,ActionSheet,TreeSelect,Sidebar,SidebarItem,
   Grid,GridItem,Skeleton,Rate,NoticeBar  

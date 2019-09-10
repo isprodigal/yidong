@@ -1,45 +1,37 @@
 <template>
   <div class="smsjs">
-    <van-nav-bar title=" 什么是近视？看书也会导致近视吗？" left-text="返回" left-arrow @click-left="onClickLeft">
+    <van-nav-bar title="这三种物品少往家里买：湿巾 空气清新剂等" left-text="返回" left-arrow @click-left="onClickLeft">
       <van-icon :name="shcan" slot="right" @click="shoucang" style="margin-right:.2rem;" />
       <!-- <svg class="icon" aria-hidden="true" slot="right" style="color:#fff;">
         <use xlink:href="#icon-fenxiang" />
-      </svg> -->
+      </svg>-->
     </van-nav-bar>
     <div class="main">
-      <img src="static/img/sjList2.jpg" alt />
+      <img src="static/img/sjList6.jpg" alt />
     </div>
     <div class="zhuti">
-      <p class="jiacu">1.近视是什么？</p>
+      <p>我们时常会希望自己家里干干净净，飘飘亮亮的，可有些东西因为产品质量的问题，反而会对我们的健康产生危害，以下的几个产品就最好不要购买：</p>
+      <p class="jiacu">1.消毒湿巾</p>
       <p
         style="text-indent: 25px;"
-      >眼球就是一个照相机，照相机镜头成像在底片之前就是近视，因而近视常可以归结到两个结构因素上，一是照相机镜头折光性太强，叫做曲率性近视，二是照相机镜头与底片之间的距离太远，叫做轴性近视。镜头的部分在三岁之后的变化是很小的，所以学龄近视的出现多归咎于眼轴增长。除此之外，当然也存在一些特殊类型的近视，如病理性近视、各种眼病引起的形觉剥夺性近视、血糖波动引起的突发性近视等。</p>
-      <p class="jiacu">2.造成现在近视高发的原因是什么？</p>
+      > 不少标着“消毒湿巾”的湿巾其实根本不能消毒，而且很多湿巾还存在卫生隐患。专家表示，湿巾等产品禁止标注消毒、灭菌、除菌、药物等内容。很多湿巾产品中仅仅是添加了酒精、香精和一些防腐材料。</p>
+     
+      <p class="jiacu">2.彩釉陶瓷餐具</p>
       <p
         style="text-indent:25px"
-      >从宏观的来讲，存在几大因素，一是应试教育的体制（大量长时的近距离用眼），二是宅文化（不论大人小孩都喜欢窝在家里，娱乐活动也都在室内），三是缺乏正规的视光健康服务的提供者，没有途径获得正确的防控理念，以为在保护视力，其实是做无用功。从具体的个人来讲，跟基因、围产期情况、用眼环境习惯都有关系。</p>
-      <p class="jiacu">3.具体有哪些误区呢？</p>
-      <p style="text-indent:25px">
-        误区太多了，首先是近视的判断上，以为视力小于1.0就是近视，视力小于1.0的原因很多，可以是远视，也可以是散光，
-        也可能正在发育过程中，有的需要干预，也有很多并不需要，譬如5岁小朋友200度远视，视力0.6，
-        这是发育过程中的状态，只要观察即可，而戴镜或者训练只会让远视迅速消失，而以后更容易近视。
-        对于少儿，正确的近视判断，应该是调节麻痹的状态下验光，即我没常说的散瞳验光，才能明确是否
-        近视，即我们常说的散瞳验光，才能明确是否近视，是否需要干预。而验光操作也有讲究，
-        要有标准的验光环境、综合验光仪，也要有标准的验光流程。
-      </p>
-      <p
-        style="text-indent:25px;"
-      >第二，在配戴眼镜的方式上，常有家长拒绝戴镜，认为戴了就摘不下来了，或者要求配浅一点，其实这是一种掩耳盗铃，不戴，近视就没有了吗？仍然有，甚至会涨得更快。另一类家长认为应该看黑板戴，平时不戴，这也是误区，只有内隐斜、调节过强的小朋友适合这样的戴镜方式，而多数近视眼都是外隐斜，并不适合这样戴镜。同样，双光镜、渐进多焦镜也只适用于内隐斜、调节过强的小朋友，而多数近视儿童也是不适合的。</p>
+      >普通的彩釉陶瓷餐具，制作工艺分为釉上彩和釉下彩。釉下彩的陶瓷在一般环境下不会析出颜料中的重金属，使用起来比较安全。而釉上彩如果在高温或者酸性环境下，就容易析出颜料中的铅、镉等对人体有害的元素。</p>
+     
+      <p class="jiacu">3.空气清新剂</p>
       <p
         style="text-indent:25px"
-      >第三，在用眼的习惯上，以为不看电视、不打游戏就能防控近视，其实看书、写字、弹钢琴、画画，又何尝不是造成近视的用眼因素呢？所有长时的近距离用眼都会造成近视的发生发展，看电视30分钟，弹钢琴一个小时，后者是有过之而无不及。复旦曾经做过一项临床观察，发现学钢琴和画画的小朋友近视发病率更高。不能因为自己对孩子的控制欲就只强调不能看电视、玩电脑，也应该强调有限度的看书、写字、弹琴、画画才是。把时间留出来到户外去，户外活动越多，才能真正的减少近视发展。</p>
+      >空气清新剂大多是化学合成制剂，它只是通过散发香气混淆人的嗅觉来“淡化”异味。还有一些空气清新剂，因为产品质量的低劣，本身还会成为空气污染源。特别是老人、儿童、有呼吸系统疾病或是对某种气体比较敏感的人群要注意。</p>
     </div>
     <div class="shijian">
       <span class="fl">
         <van-icon name="browsing-history-o" />72
       </span>
       <span class="fr">
-        <van-icon name="todo-list-o" />2019-6-16 16:21
+        <van-icon name="todo-list-o" />2019-6-30 06:23
       </span>
     </div>
     <div class="fgx"></div>
@@ -116,7 +108,7 @@
 <script>
 import { Toast } from "vant";
 export default {
-  name: "smsjs",
+  name: "Wipes",
   data() {
     return {
       shcan: "like-o",
@@ -128,29 +120,29 @@ export default {
         {
           src: "static/img/user.jpg",
           name: "戏子",
-          shijian: "2019-7-20",
+          shijian: "2019-7-1",
           xing: 5,
-          neirong: "hah"
+          neirong: "sdgfdhh"
         },
         {
           src: "static/img/user.jpg",
-          name: "小星星",
-          shijian: "2019-7-21",
+          name: "戏子",
+          shijian: "2019-7-2",
           xing: 4,
-          neirong: "啦啦啦"
+          neirong: "qwrtretyiu"
         },
         {
           src: "static/img/user.jpg",
-          name: "飞飞",
-          shijian: "2019-7-22",
+          name: "戏子",
+          shijian: "2019-7-3",
           xing: 3,
-          neirong: "安全第一"
+          neirong: "zcvxcb"
         }
       ],
       xgzt: [
         {
-          src: "static/img/lb2.jpg",
-          name: "合理膳食，餐餐有蔬菜，天天有水果。",
+          src: "static/img/lb3.jpg",
+          name: "什么是近视？看书也会导致近视吗？",
           href: "/smsjs"
         },
         {

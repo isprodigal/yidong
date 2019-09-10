@@ -10,12 +10,12 @@
       </div>
     </div>
     <div class="list">
-      <van-cell title="消息通知" icon="chat-o" is-link to="/notice"/>
-      <van-cell title="我的关注" icon="like-o" is-link to="/follow" />
-      <van-cell title="浏览历史 " icon="clock-o" is-link to="/History" />
-      <van-cell title="意见反馈 " icon="replay" is-link to="/feedback" />
-      <van-cell title="清除缓存 " icon="delete" is-link @click="qchc" />
-      <van-cell title="注销 " icon="share" is-link @click="zhuxiao" />
+      <van-cell title="消息通知" icon="static/img/xiaoxi.png" is-link to="/notice"/>
+      <van-cell title="我的关注" icon="static/img/guanzhu.png" is-link to="/follow" />
+      <van-cell title="浏览历史 " icon="static/img/lishi.png" is-link to="/History" />
+      <van-cell title="意见反馈 " icon="static/img/fank.png" is-link to="/feedback" />
+      <van-cell title="清除缓存 " icon="static/img/huancun.png" is-link @click="qchc" />
+      <van-cell title="注销 " icon="static/img/zhuxiao.png" is-link @click="zhuxiao" />
     </div>
   </div>
 </template>
@@ -61,14 +61,20 @@ export default {
 
 <style lang="less" scoped>
 .user {
-  .van-cell__left-icon{
-    color: #1989fa;
+   height: 100%;
+  width: 100%;
+  position: fixed;
+  .van-cell__left-icon {
+    // color: #1989fa;
   }
   .list {
     background-color: #fff;
     padding: 0.2rem 0.2rem;
+    .van-cell__left-icon{
+      font-size: .5rem;
+    }
     .van-cell {
-      border: 1px solid #ccc;
+      border: 1px solid #eee;
       border-radius: 0.2rem;
       margin-bottom: 0.2rem;
     }
@@ -79,10 +85,6 @@ export default {
   .van-hairline--bottom::after {
     border: 0px;
   }
-  background-color: #f5f5f5;
-  height: 100%;
-  width: 100%;
-  position: fixed;
   .main {
     background-color: #1989fa;
     padding: 0.1rem 0.3rem;

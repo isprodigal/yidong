@@ -35,6 +35,22 @@ span {
 b {
   font-size: 0.3rem;
 }
+.van-nav-bar{
+  height: 1.2rem;
+  line-height: 1.4rem;
+}
+.van-nav-bar__left{
+  line-height: 1rem;
+}
+.van-nav-bar__right{
+  line-height: 1rem;
+}
+.van-nav-bar__text:active{
+  background-color: #1989fa;
+}
+.van-hairline--bottom::after{
+  border: 0px;
+}
 .icon {
   width: 1em;
   height: 1em;

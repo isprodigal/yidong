@@ -20,7 +20,7 @@
       <van-cell title="退出登陆" @click="tuichudenglu" />
     </van-cell-group>
     <!-- 姓名修改弹出层 -->
-    <van-popup v-model="show" round position="top" :style="{ height: '30%' }">
+    <van-popup v-model="show"  position="center" :style="{ width:'100%', height: '30%' }">
       <div class="tanchu" style="padding:.3rem .2rem;">
         <div style="text-align:center">{{tctitle}}</div>
         <van-cell-group>
@@ -42,7 +42,7 @@
       close-on-click-action
     />
     <!-- 修改密码弹出层 -->
-    <van-popup v-model="mimashow" round position="top" :style="{ height: '40%' }">
+    <van-popup v-model="mimashow"  position="center" :style="{ width:'100%',height: '40%' }">
       <div class="tanchu" style="padding:.3rem .2rem;">
         <div style="text-align:center">修改密码</div>
         <van-cell-group>
@@ -155,7 +155,7 @@ export default {
   .tanchu {
     .van-cell {
       border: 1px solid #1989fa;
-      border-radius: 1rem;
+      border-radius: .2rem;
       height: 1rem;
       line-height: 0.5rem;
       font-size: 0.3rem;
@@ -172,6 +172,7 @@ export default {
     line-height: 1rem;
     font-weight: 700;
     font-size: 0.4rem;
+     border-bottom: 1px solid #ebedf0;
   }
   .van-hairline--top-bottom::after,
   .van-hairline-unset--top-bottom::after {

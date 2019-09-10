@@ -7,7 +7,7 @@
       </svg> -->
     </van-nav-bar>
     <div class="main">
-      <img src="static/img/lb2.jpg" alt />
+      <img src="static/img/sjList3.jpg" alt />
     </div>
     <div class="zhuti">
       <p>很多人都知道吃蔬菜水果对我们的身体有益，但却很少有人知道一天到底吃多少才算足够，如果摄入不足对身体又有什么影响？</p>

@@ -84,6 +84,18 @@ const router = new Router({
       path: '/speak',
       name: ' 3岁多小孩不说话怎么办?',
       component: () => import('../details/speak.vue'),
+    },{
+      path: '/diarrhea',
+      name: ' 腹泻吃什么能快速止泻',
+      component: () => import('../details/diarrhea.vue'),
+    },{
+      path: '/eat',
+      name: ' 经常吃得太饱会有什么坏处',
+      component: () => import('../details/eat.vue'),
+    },{
+      path: '/Wipes',
+      name: ' 这三种物品少往家里买：湿巾 空气清新剂等',
+      component: () => import('../details/Wipes.vue'),
     },
     {
       path: '/user',

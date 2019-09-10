@@ -26,19 +26,19 @@ export default {
         {
           name: "中暑了你会喝藿香正气水吗？",
           keshi: "中医科-张程",
-          imgs: "static/img/sj1.jpg",
+          imgs: "static/img/sjList1.jpg",
           tz: "/zshxzq"
         },
         {
           name: " 什么是近视？看书也会导致近视吗？",
           keshi: "眼科-张张",
-          imgs: "static/img/lb3.jpg",
+          imgs: "static/img/sjList2.jpg",
           tz: "/smsjs"
         },
         {
           name: " 合理膳食，餐餐有蔬菜，天天有水果。",
           keshi: "养生科-刘飞",
-          imgs: "static/img/lb2.jpg",
+          imgs: "static/img/sjList3.jpg",
           tz: "/reasonable"
         },
         {
@@ -64,6 +64,30 @@ export default {
           keshi: "儿童科-花儿",
           imgs: "static/img/sj5.jpg",
           tz: "/speak"
+        },
+        {
+          name: " 腹泻吃什么能快速止泻?",
+          keshi: "肠胃科-朱明",
+          imgs: "static/img/sjList4.jpg",
+          tz: "/diarrhea"
+        },
+        {
+          name: " 经常吃得太饱会有什么坏处",
+          keshi: "肠胃科-小峰",
+          imgs: "static/img/sjList5.jpg",
+          tz: "/eat"
+        },
+        {
+          name: " 这三种物品少往家里买：湿巾 空气清新剂等",
+          keshi: "生活科-艳梅",
+          imgs: "static/img/sjList6.jpg",
+          tz: "/Wipes"
+        },
+        {
+          name: " 运动造成的损伤数百种，哪些部位容最常见呢？",
+          keshi: "生活科-张山",
+          imgs: "static/img/sjList7.jpg",
+          tz: "/motion"
         }
       ]
     };

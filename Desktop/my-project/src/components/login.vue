@@ -9,13 +9,13 @@
       @click-right="onClickRight"
     />
     <div class="mainTop">
-      <img src="../../static/img/logo.png" alt />
+      <img src="static/img/logo.png" alt />
     </div>
     <van-cell-group>
-      <van-field v-model="username" left-icon="contact" placeholder="请输入用户名" />
+      <van-field v-model="username" left-icon="static/img/zhanghao.png" placeholder="请输入用户名" />
       <van-field
         v-model="password"
-        left-icon="bag-o"
+        left-icon="static/img/mima.png"
         :right-icon="rightIcon"
         :type="type"
         placeholder="请输入密码"
@@ -73,16 +73,24 @@ export default {
 </script>
 <style lang="less" scoped>
 .login {
+  .van-hairline--top-bottom::after, .van-hairline-unset--top-bottom::after{
+    border: 0px ;
+  }
   .van-nav-bar__right{
   right: 16px;
 }
   .van-nav-bar .van-icon,.van-nav-bar__text{
     color: #fff;
   }
+  /deep/.van-field__left-icon {
+    i {
+      font-size: 0.5rem;
+    }
+  }
   .van-cell {
     border: 1px solid #1989fa;
     border-radius: 10px;
-    width: 70%;
+    width: 75%;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 0.5rem;
@@ -106,7 +114,7 @@ export default {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 70%;
+    width: 75%;
     border-radius: 10px;
   }
   .van-cell-group {

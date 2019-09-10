@@ -1,45 +1,47 @@
 <template>
   <div class="smsjs">
-    <van-nav-bar title=" 什么是近视？看书也会导致近视吗？" left-text="返回" left-arrow @click-left="onClickLeft">
+    <van-nav-bar title="运动造成的损伤数百种，哪些部位容最常见呢？" left-text="返回" left-arrow @click-left="onClickLeft">
       <van-icon :name="shcan" slot="right" @click="shoucang" style="margin-right:.2rem;" />
       <!-- <svg class="icon" aria-hidden="true" slot="right" style="color:#fff;">
         <use xlink:href="#icon-fenxiang" />
-      </svg> -->
+      </svg>-->
     </van-nav-bar>
     <div class="main">
-      <img src="static/img/sjList2.jpg" alt />
+      <img src="static/img/sjList7.jpg" alt />
     </div>
     <div class="zhuti">
-      <p class="jiacu">1.近视是什么？</p>
+      <p>　因为运动造成的损伤有数百种，但哪些是最常见的呢?近日，美国“福克斯新闻网”援引美国运动协会文章，对身体最易受伤的5个部位做了一个大排名。</p>
+      <p class="jiacu">第一名膝盖</p>
       <p
         style="text-indent: 25px;"
-      >眼球就是一个照相机，照相机镜头成像在底片之前就是近视，因而近视常可以归结到两个结构因素上，一是照相机镜头折光性太强，叫做曲率性近视，二是照相机镜头与底片之间的距离太远，叫做轴性近视。镜头的部分在三岁之后的变化是很小的，所以学龄近视的出现多归咎于眼轴增长。除此之外，当然也存在一些特殊类型的近视，如病理性近视、各种眼病引起的形觉剥夺性近视、血糖波动引起的突发性近视等。</p>
-      <p class="jiacu">2.造成现在近视高发的原因是什么？</p>
+      > 膝盖损伤占所有运动损伤的55%，涉及的运动包括跑步、自行车、游泳、足球、篮球、排球等。建议：应经常更换运动鞋及鞋垫;运动场地要软一点;多进行锻炼四头肌的力量练习;膝盖一旦感觉不适，至少休息两天，可以服用一些抗炎药物。</p>
+     
+      <p class="jiacu">第二名肩部</p>
       <p
         style="text-indent:25px"
-      >从宏观的来讲，存在几大因素，一是应试教育的体制（大量长时的近距离用眼），二是宅文化（不论大人小孩都喜欢窝在家里，娱乐活动也都在室内），三是缺乏正规的视光健康服务的提供者，没有途径获得正确的防控理念，以为在保护视力，其实是做无用功。从具体的个人来讲，跟基因、围产期情况、用眼环境习惯都有关系。</p>
-      <p class="jiacu">3.具体有哪些误区呢？</p>
-      <p style="text-indent:25px">
-        误区太多了，首先是近视的判断上，以为视力小于1.0就是近视，视力小于1.0的原因很多，可以是远视，也可以是散光，
-        也可能正在发育过程中，有的需要干预，也有很多并不需要，譬如5岁小朋友200度远视，视力0.6，
-        这是发育过程中的状态，只要观察即可，而戴镜或者训练只会让远视迅速消失，而以后更容易近视。
-        对于少儿，正确的近视判断，应该是调节麻痹的状态下验光，即我没常说的散瞳验光，才能明确是否
-        近视，即我们常说的散瞳验光，才能明确是否近视，是否需要干预。而验光操作也有讲究，
-        要有标准的验光环境、综合验光仪，也要有标准的验光流程。
+      >约20%的运动损伤会涉及到肩部，比如错位、扭伤和拉伤等。肩伤在网球、游泳、举重、棒球和排球中最常见，症状主要有疼痛、僵硬、无力等。建议：平时应多活动肩部;受伤后，先冷敷受伤部位，再压迫及抬高受伤部位。</p>
+     
+      <p class="jiacu">第三名脚踝</p>
+      <p
+        style="text-indent:25px"
+      >脚踝扭伤在足球、曲棍球、篮球和排球运动中最为常见，在跑、跳及快速转动运动中几乎难以避免。常见症状包括：肿胀、疼痛及行走障碍等。建议：运动前应充分活动脚踝并戴护踝器具;受伤后要先冷敷，但休息别超过1天，轻微活动会让脚踝伤痊愈更快。</p>
+      <p class="jiacu">第四名肘部</p>
+      <p
+        style="text-indent:25px"
+      >肘部损伤占所有运动损伤的7%。反复反手击球会造成肘部肌腱损伤，导致网球肘、高尔夫肘。建议：加强前臂训练，如屈腕、反转手腕及捏橡皮球等，提高手臂摆动技巧，运动时戴上护肘等;受伤后及时冷敷。
       </p>
-      <p
-        style="text-indent:25px;"
-      >第二，在配戴眼镜的方式上，常有家长拒绝戴镜，认为戴了就摘不下来了，或者要求配浅一点，其实这是一种掩耳盗铃，不戴，近视就没有了吗？仍然有，甚至会涨得更快。另一类家长认为应该看黑板戴，平时不戴，这也是误区，只有内隐斜、调节过强的小朋友适合这样的戴镜方式，而多数近视眼都是外隐斜，并不适合这样戴镜。同样，双光镜、渐进多焦镜也只适用于内隐斜、调节过强的小朋友，而多数近视儿童也是不适合的。</p>
+      <p class="jiacu">第五名肌肉</p>
       <p
         style="text-indent:25px"
-      >第三，在用眼的习惯上，以为不看电视、不打游戏就能防控近视，其实看书、写字、弹钢琴、画画，又何尝不是造成近视的用眼因素呢？所有长时的近距离用眼都会造成近视的发生发展，看电视30分钟，弹钢琴一个小时，后者是有过之而无不及。复旦曾经做过一项临床观察，发现学钢琴和画画的小朋友近视发病率更高。不能因为自己对孩子的控制欲就只强调不能看电视、玩电脑，也应该强调有限度的看书、写字、弹琴、画画才是。把时间留出来到户外去，户外活动越多，才能真正的减少近视发展。</p>
+      >热身不足、疲劳、柔韧性差、体虚都会导致各种肌肉拉伤。最常见的拉伤部位包括腘绳肌和小腿肌肉。建议运动前后做拉伸练习;疲劳时不要运动;肌肉拉伤的治疗包括冷敷及药物治疗;受伤后及时冷敷。
+      </p>
     </div>
     <div class="shijian">
       <span class="fl">
         <van-icon name="browsing-history-o" />72
       </span>
       <span class="fr">
-        <van-icon name="todo-list-o" />2019-6-16 16:21
+        <van-icon name="todo-list-o" />2019-6-30 06:23
       </span>
     </div>
     <div class="fgx"></div>
@@ -116,7 +118,7 @@
 <script>
 import { Toast } from "vant";
 export default {
-  name: "smsjs",
+  name: "motion",
   data() {
     return {
       shcan: "like-o",
@@ -128,29 +130,29 @@ export default {
         {
           src: "static/img/user.jpg",
           name: "戏子",
-          shijian: "2019-7-20",
+          shijian: "2019-7-1",
           xing: 5,
-          neirong: "hah"
+          neirong: "sdgfdhh"
         },
         {
           src: "static/img/user.jpg",
-          name: "小星星",
-          shijian: "2019-7-21",
+          name: "戏子",
+          shijian: "2019-7-2",
           xing: 4,
-          neirong: "啦啦啦"
+          neirong: "qwrtretyiu"
         },
         {
           src: "static/img/user.jpg",
-          name: "飞飞",
-          shijian: "2019-7-22",
+          name: "戏子",
+          shijian: "2019-7-3",
           xing: 3,
-          neirong: "安全第一"
+          neirong: "zcvxcb"
         }
       ],
       xgzt: [
         {
-          src: "static/img/lb2.jpg",
-          name: "合理膳食，餐餐有蔬菜，天天有水果。",
+          src: "static/img/lb3.jpg",
+          name: "什么是近视？看书也会导致近视吗？",
           href: "/smsjs"
         },
         {
